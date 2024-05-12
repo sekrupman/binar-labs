@@ -10,7 +10,7 @@ import {
 import ModalNews from "../modalNews/page";
 import fetchNewsSources from "../../../../api/news";
 
-const CardNews = ({ page, searchTitle, searchDate }) => {
+const CardNews = ({ page, searchTitle, searchDate, setPage }) => {
   const [modal, setModal] = useState(false);
   const [newsSources, setNewsSources] = useState([]);
   const [selectedSource, setSelectedSource] = useState(null);
@@ -32,15 +32,13 @@ const CardNews = ({ page, searchTitle, searchDate }) => {
   useEffect(() => {
     const filteredSources = newsSources.filter(source => {
       const titleMatch = source.title.toLowerCase().includes(searchTitle.toLowerCase());
-      const dateMatch = source.publishedAt.includes(searchDate);
+      const dateMatch = searchDate ? source.publishedAt.includes(searchDate) : true;
       return titleMatch && dateMatch;
     });
     setFilteredSources(filteredSources);
-  }, [newsSources, searchTitle, searchDate]);
-
-  useEffect(() => {
-    renderNewsCards();
-  }, [filteredSources, page]);
+    setPage(1);
+  }, [newsSources, searchTitle, searchDate, setPage]);
+  
 
   const toggleModal = () => setModal(!modal);
 

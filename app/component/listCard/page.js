@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CardNews from "../additional/card/page";
 import { Button, Input, InputGroup, Label } from "reactstrap";
 
@@ -45,7 +45,7 @@ const ListCard = (args) => {
         </div>
       </InputGroup>
 
-      <CardNews page={page} searchTitle={searchTitle} searchDate={searchDate} />
+      <CardNews page={page} searchTitle={searchTitle} searchDate={searchDate} setPage={setPage} />
       <div
         style={{
           marginTop: "2rem",
