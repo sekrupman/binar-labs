@@ -1,0 +1,4 @@
+1. Ketik perintah 'git clone https://github.com/sekrupman/binar-labs.git' pada terminal
+2. Pindah directory ke folder 'labs-project', bisa menggunakan perintah 'cd labs-project' pada terminal, atau manual lewat File -> Open Folder
+3. Ketik perintah 'npm install' pada terminal untuk menginstall depedency
+4. Ketik perintah 'npm run dev' pada terminal untuk mengeksekusi project
