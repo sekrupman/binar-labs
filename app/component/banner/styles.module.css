@@ -1,0 +1,53 @@
+.banner{
+    display: flex;
+    justify-content: space-around;
+    gap:5rem;
+    margin-bottom: 2rem;
+}
+
+.banner img{
+    width: 70%;
+    height: 450px;
+}
+
+.portalContent{
+    display: flex;
+    flex-direction: column;
+}
+
+.portalContent ul {
+    list-style-type: none !important;
+  }
+
+  .hotNewsTitle{
+    animation:updown 3s linear infinite;
+    color: yellow;
+  }
+
+  @keyframes updown{
+    0%{
+      transform: translateY(-20px);
+    }
+    50%{
+      transform: translateY(20px);
+    }
+    100%{
+      transform:translateY(-20px);
+    }
+  }
+
+  .hotNewsList a {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    font-size: larger;
+  }
+
+  .hotNewsList li {
+    list-style-type: disc !important;
+    margin: 2rem auto 2rem auto;
+  }
+
+  .hotNewsList a:hover{
+    color: blue;
+  }

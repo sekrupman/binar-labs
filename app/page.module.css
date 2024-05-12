@@ -1,3 +1,7 @@
+body{
+  background-color: blueviolet !important;
+}
+
 .main {
   display: flex;
   flex-direction: column;
